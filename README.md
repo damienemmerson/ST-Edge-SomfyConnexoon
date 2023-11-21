@@ -3,6 +3,8 @@ This is a Smartthings Edge Driver for Somfy Connexoon.
 
 The driver has been developed to work with Connexoon (RTS) hubs and currently only supports the discovery of Somfy RTS blinds. More Somfy RTS devices can be added (Roller shutters, Windows, Curtains, etc) - Just ask me!
 
+The edge driver should also work with Somfy Tahoma Hubs. However, this has not been tested.
+
 ## Prerequisites
 
 You will need the following hardware:
