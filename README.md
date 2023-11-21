@@ -28,9 +28,9 @@ Generate and Activate an API Token using using the instructions [here](https://g
 
 ### 3. Channel enrollment and driver installation
 
-Enroll your hub into my Smartthings production channel [here](https://callaway.smartthings.com/channels/d9a44c51-f5db-4849-81a6-dc7c6b3540ff). Then, find and install the Edge Driver called ST-Edge-SomfyConnexoon
+Enroll your hub into my Smartthings production channel [here](https://callaway.smartthings.com/channels/d9a44c51-f5db-4849-81a6-dc7c6b3540ff). Then, find and install the Edge Driver called ST-Edge-SomfyConnexoon.
 
-### 4. Discover and configure Somfy Connexoon
+### 4. Discover the Somfy Connexoon in Smartthings
 
 In the Smartthings app, you can now discover the Somfy Connexoon.
 
@@ -39,7 +39,13 @@ Open the Smartthings app then select ***Add device*** > ***Scan for nearby devic
 > [!NOTE]
 > Once the Somfy Connexoon has been discovered, it will appear offline until you configure the IP address and Token in the device settings.
 
-Then, open the discovered device then tap the vertical ellipsis and choose settings. Here you can enter the IP address and Token for the Connexoon.
+![Screenshot of Somfy Connexoon device not configured and offline](assets/images/screenshot_connexoon-notconfigured.png)
+
+### 5. Configure the Somfy Connexoon in Smartthings
+
+Open the discovered device then tap the vertical ellipsis and choose settings. Here you can enter the IP address and Token for the Connexoon.  
+  
+![Screenshot of Somfy Connexoon device settings](assets/images/screenshot_connexoon-settings.png)
 
 > [!IMPORTANT]
 > Get the IP address by pinging `gateway-{pin}.local`. For example, `gayeway-1000-2000-3000.local` where 1000-2000-3000 is the PIN recorded on the bottom of the Connexoon.
@@ -47,13 +53,13 @@ Then, open the discovered device then tap the vertical ellipsis and choose setti
 > [!TIP]
 > It is not possible to set a static IP for the Connexoon. Consider setting an IP address reservation on your router instead so that the IP address does not change.
 
-![Screenshot of Somfy Connexoon device not configured and offline](assets/images/screenshot_connexoon-notconfigured.png)
-![Screenshot of Somfy Connexoon device settings](assets/images/screenshot_connexoon-settings.png)
+If everything has been configured correctly the Somfy Connexoon should be online and connected.  
+  
 ![Screenshot of Somfy Connexoon device online and connected](assets/images/screenshot_connexoon-connected.png)
 
 ### 5. Discover your Somfy devices
 
-If the IP adress and Token are configured correcly, the status should say ***Connected***. Tap on the Discovery button to find all Somfy devices.  
+Tap on the Discovery button to find all Somfy devices.  
   
 ![Screenshot of Somfy Blind](assets/images/screenshot_blind.png)
 
