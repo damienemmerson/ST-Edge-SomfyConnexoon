@@ -4,6 +4,8 @@ This is a Smartthings Edge Driver for Somfy Connexoon.
 The driver has been developed to work with Connexoon (RTS) hubs and currently only supports the discovery of Somfy RTS blinds. More Somfy RTS devices can be added (Roller shutters, Windows, Curtains, etc) - Just ask me!
 
 ## Prerequisites
+
+You will need the following hardware:
 - Smartthings Hub
 - Somfy Connexoon Hub
 
@@ -11,16 +13,16 @@ The driver has been developed to work with Connexoon (RTS) hubs and currently on
 
 ### 1. Configure your Connexoon hub 
 
-Register all your Somfy RTS products on the Connexoon using the instructions that came with the product. Then, activate it 
+Register all your Somfy RTS products on the Connexoon using the instructions that came with the product. Then, activate it at (https://www.somfy-connect.com).
 
-### 2. Generate an Activate your API Token
+### 2. Generate and Activate your API Token
 
 The API Token is required for sending authenticated requests to the Connexoon over the local network.
 
-Generate and Activate an API Token using using the instructions [here](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode)
+Generate and Activate an API Token using using the instructions [here](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode).
 
 > [!IMPORTANT]
-> Australian users should use the instructions above but replace `{{url}}` with `ha201-1.overkiz.com`
+> Australian users should use the same instructions above but replace `{{url}}` with `ha201-1.overkiz.com`
 
 ### 3. Channel enrollment and driver installation
 
