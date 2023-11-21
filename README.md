@@ -50,5 +50,6 @@ Then, open the discovered device then tap the vertical ellipsis and choose setti
 ### 5. Discover your Somfy devices
 
 If the IP adress and Token are configured correcly, the status should say ***Connected***. Tap on the Discovery button to find all Somfy devices.  
+  
 ![Screenshot of Somfy Blind](assets/images/screenshot_blind.png)
 
