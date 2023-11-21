@@ -31,14 +31,19 @@ Enroll your hub into my Smartthings production channel [here](https://callaway.s
 Open the Smartthings app then select ***Add device*** > ***Scan for nearby devices*** 
 
 > [!NOTE]
-> Once the Somfy Connexoon has been discovered, it will appear offline until you configure the IP address and Token in the device settings
+> Once the Somfy Connexoon has been discovered, it will appear offline until you configure the IP address and Token in the device settings.
 
 Open the discovered device then tap the vertical ellipsis and choose settings. Here you can enter the IP address and token for the Connexoon.
 
 > [!IMPORTANT]
-> Get the IP address by pinging `gateway-{pin}.local`. E.g. gayeway-1000-2000-3000.local
+> Get the IP address by pinging `gateway-{pin}.local`. 
+E.g. `gayeway-1000-2000-3000.local`
 
 > [!TIP]
 > It is not possible to set a static IP for the Connexoon. Consider setting an IP address reservation on your router instead so the IP address does not change.
+
+### 5. Discover your Somfy devices
+
+
 
 ## Limitations
