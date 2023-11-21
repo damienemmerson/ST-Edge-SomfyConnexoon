@@ -59,7 +59,7 @@ If everything has been configured correctly the Somfy Connexoon should be online
 
 ### 5. Discover your Somfy devices
 
-Tap on the Discovery button to find all your Somfy devices. You will see them all as seperate devices on your dashboard.
+Tap on the Discovery button to find all your Somfy devices. You will see them appear as seperate devices on your dashboard.
   
 ![Screenshot of Somfy Blind](assets/images/screenshot_dashboard.png)
 ![Screenshot of Somfy Blind](assets/images/screenshot_blind.png)
