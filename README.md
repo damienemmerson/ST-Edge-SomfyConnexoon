@@ -54,13 +54,12 @@ Open the discovered device then tap the vertical ellipsis and choose settings. H
 > It is not possible to set a static IP for the Connexoon. Consider setting an IP address reservation on your router instead so that the IP address does not change.
 
 If everything has been configured correctly the Somfy Connexoon should be online and connected.  
-  
-![Screenshot of Somfy Connexoon device online and connected](assets/images/screenshot_connexoon-connected.png)
 
 ### 5. Discover your Somfy devices
 
 Tap on the Discovery button to find all your Somfy devices. You will see them appear as seperate devices on your dashboard.
-  
-![Screenshot of Somfy Blind](assets/images/screenshot_dashboard.png)
+
+![Screenshot of Somfy Connexoon device online and connected](assets/images/screenshot_connexoon-connected.png)
+![Screenshot of dashboard showing all discovered somfy devices](assets/images/screenshot_dashboard.png)
 ![Screenshot of Somfy Blind](assets/images/screenshot_blind.png)
 
