@@ -1,7 +1,7 @@
 # Somfy Connexoon Edge Driver
-Smartthings Edge Driver for the Somfy Connexoon hub. The driver has been developed for Connexoon (RTS) users and tested only for Somfy RTS blinds.
+Smartthings Edge Driver for Somfy Connexoon. 
 
-More supported Somfy RTS devices can be added - Just ask me!
+The driver has been developed for Connexoon (RTS) devices and works only for Somfy RTS blinds. More Somfy RTS devices can be added - Just ask me!
 
 ## Prerequisites
 - Smartthings Hub
