@@ -1,7 +1,7 @@
 # Somfy Connexoon Edge Driver
-Smartthings Edge Driver for Somfy Connexoon. 
+This is a Smartthings Edge Driver for Somfy Connexoon. 
 
-The driver has been developed for Connexoon (RTS) devices and works only for Somfy RTS blinds. More Somfy RTS devices can be added - Just ask me!
+The driver has been developed to work with Connexoon (RTS) hubs and currently only supports the discovery of Somfy RTS blinds. More Somfy RTS devices can be added (Roller shutters, Windows, Curtains, etc) - Just ask me!
 
 ## Prerequisites
 - Smartthings Hub
@@ -26,20 +26,26 @@ Generate and Activate an API Token using using the instructions [here](https://g
 
 Enroll your hub into my Smartthings production channel [here](https://callaway.smartthings.com/channels/d9a44c51-f5db-4849-81a6-dc7c6b3540ff). Then, find and install the Edge Driver called ST-Edge-SomfyConnexoon
 
-### 4. Device discovery and configuration
+### 4. Discover and configure Somfy Connexoon
+
+In the Smartthings app, you can now discover and configure the Somfy Connexoon hub.
 
 Open the Smartthings app then select ***Add device*** > ***Scan for nearby devices*** 
 
 > [!NOTE]
 > Once the Somfy Connexoon has been discovered, it will appear offline until you configure the IP address and Token in the device settings.
 
-Open the discovered device then tap the vertical ellipsis and choose settings. Here you can enter the IP address and token for the Connexoon.
+Then, open the discovered device then tap the vertical ellipsis and choose settings. Here you can enter the IP address and token for the Connexoon.
 
 > [!IMPORTANT]
 > Get the IP address by pinging `gateway-{pin}.local`. For example, `gayeway-1000-2000-3000.local` where 1000-2000-3000 is the Pin recorded on the bottom of the Connexoon.
 
 > [!TIP]
 > It is not possible to set a static IP for the Connexoon. Consider setting an IP address reservation on your router instead so the IP address does not change.
+
+![Screenshot of Somfy Connexoon device not configured and offline](assets/images/screenshot_connexoon-notconfigured.png)
+![Screenshot of Somfy Connexoon device settings](assets/images/screenshot_connexoon-settings.png)
+![Screenshot of Somfy Connexoon device online and connected](assets/images/screenshot_connexoon-connected.png)
 
 ### 5. Discover your Somfy devices
 
