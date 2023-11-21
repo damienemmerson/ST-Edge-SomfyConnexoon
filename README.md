@@ -22,7 +22,7 @@ More supported Somfy RTS devices can be added - Just ask me!
 
 2. Enroll your hub into my production channel [here](https://callaway.smartthings.com/channels/d9a44c51-f5db-4849-81a6-dc7c6b3540ff)
 2. Select ***Available Drivers***.
-2. ***Install*** the Edge Driver called ST-Edge-SomfyConnexoon
+2. Find the Edge Driver called ST-Edge-SomfyConnexoon and select ***Install***
 2. Discover the Somfy Connexoon device in the Smartthings App by selecting ***Add device*** > ***Scan for nearby devices*** 
 
 > [!NOTE]
