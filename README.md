@@ -43,12 +43,12 @@ Open the Smartthings app then select ***Add device*** > ***Scan for nearby devic
 
 ### 5. Configure the Somfy Connexoon in Smartthings
 
-Open the discovered device then tap the vertical ellipsis and choose settings. Here you can enter the IP address and Token for the Connexoon.  
+Open the discovered device then tap the vertical ellipsis and choose settings. Here you can enter the IP address and Token for your Connexoon.  
   
 ![Screenshot of Somfy Connexoon device settings](assets/images/screenshot_connexoon-settings.png)
 
 > [!IMPORTANT]
-> Get the IP address by pinging `gateway-{pin}.local`. For example, `gayeway-1000-2000-3000.local` where 1000-2000-3000 is the PIN recorded on the bottom of the Connexoon.
+> Get the IP address by pinging `gateway-{pin}.local`, where `{PIN}` is the PIN recorded on the bottom of the Connexoon. For example, `gayeway-1000-2000-3000.local`. 
 
 > [!TIP]
 > It is not possible to set a static IP for the Connexoon. Consider setting an IP address reservation on your router instead so that the IP address does not change.
