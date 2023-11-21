@@ -19,7 +19,7 @@ Register all your Somfy RTS products on the Connexoon using the instructions tha
 
 ### 2. Generate and Activate your API Token
 
-The API Token is required for sending authenticated requests to the Connexoon over the local network.
+The API Token is required for sending authenticated API requests from Smartthings to the Connexoon over the local network.
 
 Generate and Activate an API Token using using the instructions [here](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode).
 
