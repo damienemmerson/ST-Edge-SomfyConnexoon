@@ -9,27 +9,36 @@ More supported Somfy RTS devices can be added - Just ask me!
 
 ## Setup
 
-### Configure Connexoon 
+### 1. Configure your Connexoon hub 
 
-1. Register all your Somfy RTS products on the Connexoon hub
-2. Activate your Connexoon hub
-3. Generate and Activate an API Token using using the instructions [here](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode)
+Register all your Somfy RTS products on the Connexoon using the instructions that came with the product. Then, activate it 
+
+### 2. Generate an Activate your API Token
+
+The API Token is required for sending authenticated requests to the Connexoon over the local network.
+
+Generate and Activate an API Token using using the instructions [here](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode)
 
 > [!IMPORTANT]
 > Australian users should use the instructions above but replace `{{url}}` with `ha201-1.overkiz.com`
 
-### Configure Smartthings 
+### 3. Channel enrollment and driver installation
 
-1. Enroll your hub into my production channel [here](https://callaway.smartthings.com/channels/d9a44c51-f5db-4849-81a6-dc7c6b3540ff)
-2. Select ***Available Drivers***.
-3. Find the Edge Driver called ST-Edge-SomfyConnexoon and select ***Install***
-4. Discover the Somfy Connexoon device in the Smartthings App by selecting ***Add device*** > ***Scan for nearby devices*** 
+Enroll your hub into my Smartthings production channel [here](https://callaway.smartthings.com/channels/d9a44c51-f5db-4849-81a6-dc7c6b3540ff). Then, find and install the Edge Driver called ST-Edge-SomfyConnexoon
+
+### 4. Device discovery and configuration
+
+Open the Smartthings app then select ***Add device*** > ***Scan for nearby devices*** 
 
 > [!NOTE]
-> Once the Somfy Connexoon hub has been discovered, it will appear offline until you configure the IP address and Token in the device settings
+> Once the Somfy Connexoon has been discovered, it will appear offline until you configure the IP address and Token in the device settings
 
-5. Tap the vertical ellipsis and choose settings.
-6. Enter the IP address and token for the Connexoon hub.
-7. Tap on the discover button in the detailed view.
+Open the discovered device then tap the vertical ellipsis and choose settings. Here you can enter the IP address and token for the Connexoon.
 
-## Limitationsabove 
+> [!IMPORTANT]
+> Get the IP address by pinging `gateway-{pin}.local`. E.g. gayeway-1000-2000-3000.local
+
+> [!TIP]
+> It is not possible to set a static IP for the Connexoon. Consider setting an IP address reservation on your router instead so the IP address does not change.
+
+## Limitations
