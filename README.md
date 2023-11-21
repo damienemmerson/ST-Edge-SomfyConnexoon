@@ -41,7 +41,7 @@ Open the Smartthings app then select ***Add device*** > ***Scan for nearby devic
 
 ![Screenshot of Somfy Connexoon device not configured and offline](assets/images/screenshot_connexoon-notconfigured.png)
 
-### 5. Configure the Somfy Connexoon in Smartthings
+### 5. Configure the device settings
 
 Open the discovered device then tap the vertical ellipsis and choose settings. Here you can enter the IP address and Token for your Connexoon.  
   
