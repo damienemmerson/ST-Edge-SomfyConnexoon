@@ -1,13 +1,12 @@
 # Somfy Connexoon Edge Driver
-text
+A Smartthings Edge Driver for the Somfy Connexoon hub. Currently the driver only supports Somfy RTS Blinds. More devices can be added - Just ask me!
 
 ## Prerequisites
-text
+- Smartthings Hub
+- Somfy Connexoon Hub
 
 ## Setup
 
-text
+### Prepare 
 
 ## Limitations
-
-text
