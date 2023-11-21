@@ -1,0 +1,13 @@
+{
+    "id": "smoothoption15782.discovery",
+    "version": 1,
+    "status": "proposed",
+    "name": "Discovery",
+    "ephemeral": false,
+    "commands": {
+        "discover": {
+            "name": "discover",
+            "arguments": []
+        }
+    }
+}

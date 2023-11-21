@@ -1,0 +1,5 @@
+name: 'ST-Edge-SomfyConnexoon'
+packageKey: 'ST-Edge-SomfyConnexoon'
+permissions:
+  lan: {}
+  discovery: {}

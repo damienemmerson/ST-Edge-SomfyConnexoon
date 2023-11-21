@@ -1,0 +1,28 @@
+name: Somfy-Connexoon
+components:
+- id: main
+  capabilities:
+  - id: smoothoption15782.status
+    version: 1
+  - id: smoothoption15782.discovery
+    version: 1
+  - id: refresh
+    version: 1
+preferences:
+  - title: "Token"
+    name: token
+    description: "Somfy Connexoon API Toekn"
+    required: true
+    preferenceType: string
+    definition:
+      stringType: password
+      default: "00000000000000000000"
+  - title: "IP Address"
+    name: ipAddress
+    description: "Somfy Connexoon IP Address"
+    required: true
+    preferenceType: string
+    definition:
+      stringType: text
+      default: "0.0.0.0"
+

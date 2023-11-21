@@ -1,0 +1,25 @@
+{
+    "id": "smoothoption15782.status",
+    "version": 1,
+    "status": "proposed",
+    "name": "Status",
+    "ephemeral": false,
+    "attributes": {
+        "status": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "value"
+                ]
+            },
+            "enumCommands": []
+        }
+    },
+    "commands": {}
+}

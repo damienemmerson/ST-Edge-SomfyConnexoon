@@ -1,0 +1,13 @@
+{
+    "detailView": [
+        {
+            "label": "Run Discovery",
+            "displayType": "pushButton",
+            "pushButton": {
+                "command": "discover"
+            }
+        }
+    ],
+    "id": "smoothoption15782.discovery",
+    "version": 1
+}
