@@ -23,7 +23,7 @@ An API Token is required for sending authenticated API requests from Smartthings
 
 Generate and Activate an API Token using using the instructions [here](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode). The important sections to complete are:
 
-1. [Enable Developer Mode](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode#getting-started)
+1. [Getting Started - Enable Developer Mode](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode#getting-started)
 2. [Login](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode#login)
 3. [Generate a token](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode#generate-a-token) 
 4. [Activate your token](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode#activate-your-token)
