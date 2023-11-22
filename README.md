@@ -15,13 +15,18 @@ You will need the following hardware:
 
 ### 1. Configure your Connexoon hub 
 
-Register all your Somfy RTS products on the Connexoon using the instructions that came with the product. Then, activate it at (https://www.somfy-connect.com).
+Register all your Somfy RTS products on the Connexoon using the instructions that came with the product. Then, activate your Connexoon at (https://www.somfy-connect.com).
 
 ### 2. Generate and Activate your API Token
 
-The API Token is required for sending authenticated API requests from Smartthings to the Connexoon over the local network.
+An API Token is required for sending authenticated API requests from Smartthings to the Connexoon over the local network.
 
-Generate and Activate an API Token using using the instructions [here](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode).
+Generate and Activate an API Token using using the instructions [here](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode). The important sections to complete are:
+
+1. [Enable Developer Mode](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode#getting-started)
+2. [Login](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode#login)
+3. [Generate a token](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode#generate-a-token) 
+4. [Activate your token](https://github.com/Somfy-Developer/Somfy-TaHoma-Developer-Mode#activate-your-token)
 
 > [!IMPORTANT]
 > Australian users should use the same instructions above but replace `{{url}}` with `ha201-1.overkiz.com`
