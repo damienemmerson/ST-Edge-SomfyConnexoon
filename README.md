@@ -28,7 +28,7 @@ Generate and Activate an API Token using using the instructions [here](https://g
 
 ### 3. Channel enrollment and driver installation
 
-Enroll your hub into my Smartthings production channel [here](https://callaway.smartthings.com/channels/d9a44c51-f5db-4849-81a6-dc7c6b3540ff). Then, find and install the Edge Driver called ST-Edge-SomfyConnexoon.
+Enroll your hub into my Smartthings production channel [here](https://callaway.smartthings.com/channels/b2716765-817a-4261-adb5-801317d9b62c). Then, find and install the Edge Driver called ST-Edge-SomfyConnexoon.
 
 ### 4. Discover the Somfy Connexoon in Smartthings
 
