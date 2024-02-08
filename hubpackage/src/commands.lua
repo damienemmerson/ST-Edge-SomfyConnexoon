@@ -147,6 +147,8 @@ function commands.create_child_edge_driver(driver, device, deviceInfo)
   -- Set device profile for Somfy RTS Blinds
   if deviceInfo.controllableName == "rts:BlindRTSComponent" then        
     device_profile = 'Somfy-Blind'
+  elseif deviceInfo.controllableName == "rts:CellularBlindRTSComponent" then        
+    device_profile = 'Somfy-Blind' 
   end
 
   -- Set child device metadata
