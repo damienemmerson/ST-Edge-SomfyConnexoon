@@ -151,6 +151,8 @@ function commands.create_child_edge_driver(driver, device, deviceInfo)
     device_profile = 'Somfy-Blind' 
   elseif deviceInfo.controllableName == "io:HorizontalAwningIOComponent" then        
     device_profile = 'Somfy-Blind' 
+  elseif deviceInfo.controllableName == "io:RollerShutterGenericIOComponent" then        
+    device_profile = 'Somfy-Blind' 
   end
 
   -- Set child device metadata
