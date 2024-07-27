@@ -1,0 +1,8 @@
+name: Somfy-GarageDoor
+components:
+- id: main
+  capabilities:
+  - id: doorControl
+    version: 1
+  categories:
+  - name: GarageDoor

@@ -8,6 +8,8 @@ components:
     version: 1
   - id: refresh
     version: 1
+  categories:
+  - name: Others
 preferences:
   - title: "Token"
     name: token
@@ -25,4 +27,13 @@ preferences:
     definition:
       stringType: text
       default: "0.0.0.0"
+  - title: "Refresh Interval"
+    name: refreshInterval
+    description: "Set device refresh interval"
+    required: true
+    preferenceType: number
+    definition:
+      minimum: 1
+      maximum: 3
+      default: 2
 

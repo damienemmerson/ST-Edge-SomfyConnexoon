@@ -1,0 +1,8 @@
+name: Somfy-LightSensor
+components:
+- id: main
+  capabilities:
+  - id: illuminanceMeasurement
+    version: 1
+  categories:
+  - name: LightSensor
