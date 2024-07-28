@@ -24,6 +24,9 @@ function lifecycles.init(driver, device)
     commands.handle_refresh(driver, device)
   elseif device.vendor_provided_label == "Somfy-Blind" then
     device:emit_event(caps.windowShade.windowShade('open'))
+  elseif device.vendor_provided_label == "Somfy-IO-Shutter" then
+    device:emit_event(caps.windowShade.windowShade('open'))
+    device:emit_event(caps.windowShadeLevel.shadeLevel(100))
   elseif device.vendor_provided_label == "Somfy-GarageDoor" then
     device:emit_event(caps.doorControl.door('closed'))
   elseif device.vendor_provided_label == "Somfy-TempSensor" then
@@ -48,7 +51,16 @@ end
 -- This function is called when the preferences of the device have changed
 function lifecycles.infoChanged(driver, device, event, args)
   log.info("[" .. device.id .. "] Info changed")
-  commands.handle_refresh(driver, device)
+
+  if device.vendor_provided_label == "Somfy-Connexoon" then
+    log.info('handling refresh')
+    commands.handle_refresh(driver, device)
+  elseif device.vendor_provided_label == "Somfy-IO-Shutter" then
+    local action = 'setMemorized1Position'
+    local presetPosition = 100 - device.preferences.presetPosition1 --transform number for somfy
+    log.info ('Preset position set to ', presetPosition)
+    commands.sendCommand(driver, device, action, presetPosition)
+  end
 end
 
 -- This function is called when the platform believes the device needs to go through provisioning for it to work as expected

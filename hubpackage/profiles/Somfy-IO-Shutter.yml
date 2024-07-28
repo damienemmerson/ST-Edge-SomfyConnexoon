@@ -1,0 +1,21 @@
+name: Somfy-IO-Shutter
+components:
+- id: main
+  capabilities:
+  - id: windowShade
+    version: 1
+  - id: windowShadeLevel
+    version: 1
+  - id: windowShadePreset
+    version: 1
+  categories:
+  - name: Blind
+preferences:
+  - title: "Preset Position"
+    name: presetPosition1
+    description: "Enter a preset position between 0 (closed) and 100 (open)."
+    required: false
+    preferenceType: number
+    definition:
+      minimum: 0
+      maximum: 100

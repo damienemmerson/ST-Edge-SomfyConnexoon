@@ -26,14 +26,37 @@ local commands = {}
 -- Capability Handlers
 -----------------------------------------------------------------
 
+function commands.handle_windowShade(driver, device, command)
+  -- Handle Window Shade action mapping
+  local action = mapCommand[command.command] or command.command
+  commands.sendCommand(driver, device, action, nil)
+end
+
+function commands.handle_windowShadeLevel(driver, device, command)
+  local action = 'setPosition'
+  local shadeLevel = command.args.shadeLevel
+  log.info ('Window shade level changed to ', shadeLevel)
+  commands.sendCommand(driver, device, action, shadeLevel)
+end
+
+function commands.handle_windowShadePreset(driver, device, command)
+  -- Handle Window Shade action mapping
+  local action = mapCommand[command.command] or command.command
+  commands.sendCommand(driver, device, action, nil)
+end
+
+function commands.handle_doorControl(driver, device, command)
+  -- Handle Window Shade action mapping
+  local action = mapCommand[command.command] or command.command
+  commands.sendCommand(driver, device, action, nil)
+end
+
+
 -- Handle executed actions
-function commands.handle_action(driver, device, command)
+function commands.sendCommand(driver, device, command, parameter)
   -- Constants
   local API_BASE_URL = 'https://' .. IpAddress .. ':8443/enduser-mobile-web/1/enduserAPI'
   local API_EXECUTE_PATH = '/exec/apply'
-
-  -- Handle Window Shade action mapping
-  local action = mapCommand[command.command] or command.command
 
   -- API request body
   local body_table = {
@@ -42,7 +65,8 @@ function commands.handle_action(driver, device, command)
       {
         commands = {
           {
-            name = action
+            name = command,
+            parameters = {parameter}
           }
         },
         deviceURL = device.device_network_id
@@ -137,13 +161,14 @@ function commands.create_child_edge_driver(driver, device, deviceInfo)
 
   -- Set device profile for Somfy RTS Blinds
   if deviceInfo.controllableName == "rts:BlindRTSComponent" then        
-    device_profile = 'Somfy-Blind'
+    --device_profile = 'Somfy-Blind'
+    device_profile = 'Somfy-IO-Shutter' --TESTING ONLY
   elseif deviceInfo.controllableName == "rts:CellularBlindRTSComponent" then        
     device_profile = 'Somfy-Blind'
   elseif deviceInfo.controllableName == "io:HorizontalAwningIOComponent" then        
     device_profile = 'Somfy-Blind'
   elseif deviceInfo.controllableName == "io:RollerShutterGenericIOComponent" then        
-    device_profile = 'Somfy-Blind'
+    device_profile = 'Somfy-IO-Shutter'
   elseif deviceInfo.controllableName == "io:GarageOpenerIOComponent" then        
     device_profile = 'Somfy-GarageDoor'
   elseif deviceInfo.controllableName == "io:LightIOSystemSensor" then        
@@ -460,6 +485,28 @@ function commands.setChildStatus(child, deviceStatesName, deviceStatesValue)
     child:emit_event(caps.illuminanceMeasurement.illuminance(deviceStatesValue))
   elseif deviceStatesName == "core:ContactState" then
     child:emit_event(caps.contactSensor.contact(deviceStatesValue))
+  elseif deviceStatesName == "core:TargetClosureState" then
+    local targetShadeLevel = 100 - deviceStatesValue
+    local latestShadeLevel = child:get_latest_state("main", caps.windowShadeLevel.ID, caps.windowShadeLevel.shadeLevel.NAME)
+    log.debug('Target Shade Level:', targetShadeLevel)
+    log.debug('Latest Shade Level:', latestShadeLevel)
+    if targetShadeLevel > latestShadeLevel then
+      child:emit_event(caps.windowShade.windowShade('opening'))
+      log.debug('Opening Shutter')
+    elseif targetShadeLevel < latestShadeLevel then
+      child:emit_event(caps.windowShade.windowShade('closing'))
+      log.debug('Closing Shutter')
+    end
+  elseif deviceStatesName == "core:ClosureState" then
+    local shadeLevel = 100 - deviceStatesValue
+    child:emit_event(caps.windowShadeLevel.shadeLevel(shadeLevel))
+    if shadeLevel == 0 then 
+      child:emit_event(caps.windowShade.windowShade('closed'))
+    elseif shadeLevel == 100 then
+      child:emit_event(caps.windowShade.windowShade('open'))
+    else
+      child:emit_event(caps.windowShade.windowShade('partially open'))
+    end
   else
     log.warn('Unknown device type: ' .. deviceStatesName)
   end
